@@ -50,15 +50,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (!href || href === '#') return;
+
+            const target = document.querySelector(href);
+            if (!target) return;
+
             e.preventDefault();
+
             const navLinks = document.querySelector('.nav-links');
             if (navLinks.classList.contains('active')) {
                 navLinks.classList.remove('active');
                 document.querySelector('.mobile-menu-toggle').classList.remove('active');
             }
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+
+            target.scrollIntoView({ behavior: 'smooth' });
         });
     });
 
