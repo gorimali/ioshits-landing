@@ -285,7 +285,8 @@ body {
     height: 100%;
     display: block;
     object-fit: cover;
-    border-radius: inherit;
+    border-radius: 16px;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 
 .app-info h3 {
