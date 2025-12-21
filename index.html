@@ -22,6 +22,11 @@
     <header class="glass-header">
         <nav>
             <div class="logo">iOSHits</div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul class="nav-links">
                 <li><a href="#apps">Apps</a></li>
                 <li><a href="#about">About</a></li>
@@ -44,7 +49,9 @@
             <div class="apps-grid">
                 <!-- App 1: Stepby Daily Weekly Pedometer -->
                 <div class="app-card glass-card">
-                    <img src="stepby_icon.jpg" alt="Stepby Pedometer Icon" class="app-icon">
+                    <div class="app-icon" style="background: linear-gradient(135deg, #10b981, #059669);">
+                        <img src="stepby_icon.jpg" alt="Stepby Pedometer Icon" style="width: 100%; height: 100%; border-radius: 16px; object-fit: cover;" onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=\"font-size: 1.5rem;\">👟</span>';">
+                    </div>
                     <div class="app-info">
                         <h3>Stepby Pedometer</h3>
                         <p class="app-tag">Health & Fitness</p>
@@ -57,7 +64,9 @@
 
                 <!-- App 2: iDiction -->
                 <div class="app-card glass-card">
-                    <img src="idiction_icon.jpg" alt="iDiction Icon" class="app-icon">
+                    <div class="app-icon" style="background: linear-gradient(135deg, #3b82f6, #1d4ed8);">
+                        <img src="idiction_icon.jpg" alt="iDiction Icon" style="width: 100%; height: 100%; border-radius: 16px; object-fit: cover;" onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=\"font-size: 1.5rem;\">🎤</span>';">
+                    </div>
                     <div class="app-info">
                         <h3>iDiction</h3>
                         <p class="app-tag">Education</p>
@@ -88,8 +97,16 @@
         </section>
     </main>
 
+
+
+    <section id="contact" class="contact-section glass-panel">
+        <h2>Get in Touch</h2>
+        <p>Interested in collaborating or have questions? Feel free to reach out!</p>
+        <a href="mailto:contact@ioshits.com" class="primary-button">Send Email</a>
+    </section>
+
     <footer>
-        <p>&copy; 2024 iOS Hits. All rights reserved.</p>
+        <p>&copy; 2025 iOS Hits. All rights reserved.</p>
         <div class="social-links">
             <a href="#">Twitter</a>
             <a href="#">GitHub</a>
@@ -98,6 +115,9 @@
     </footer>
 
     <script src="script.js"></script>
+</body>
+
+</html>
 </body>
 
 </html>
