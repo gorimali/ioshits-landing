@@ -32,6 +32,21 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
     document.head.appendChild(style);
 
+    // App icon image fallback (avoid inline onerror HTML escaping issues)
+    document.querySelectorAll('.app-icon img').forEach((img) => {
+        img.addEventListener('error', () => {
+            const container = img.closest('.app-icon');
+            if (!container) return;
+
+            const fallback = container.getAttribute('data-fallback') || '■';
+            container.textContent = fallback;
+            container.style.display = 'flex';
+            container.style.alignItems = 'center';
+            container.style.justifyContent = 'center';
+            container.style.fontSize = '1.8rem';
+        }, { once: true });
+    });
+
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
