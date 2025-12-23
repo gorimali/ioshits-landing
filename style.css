@@ -185,6 +185,23 @@ body {
     margin-top: 60px;
 }
 
+.hero.hero-compact {
+    min-height: 35vh;
+    padding: 2rem 1rem;
+    margin-top: 80px;
+    margin-bottom: 0;
+}
+
+.hero.hero-compact h1 {
+    font-size: 3rem;
+    margin-bottom: 0.75rem;
+}
+
+.hero.hero-compact p {
+    margin-bottom: 0;
+    font-size: 1.1rem;
+}
+
 .hero h1 {
     font-family: var(--primary-font);
     font-size: 4.5rem;
@@ -400,7 +417,16 @@ footer {
     .glass-header {
         padding: 1.5rem;
     }
-        margin-top: 110px;
+
+    .hero.hero-compact {
+        margin-top: 90px;
+        min-height: 25vh;
+    }
+
+    .hero.hero-compact h1 {
+        font-size: 2rem;
+    }
+
     .mobile-menu-toggle {
         display: flex;
     }

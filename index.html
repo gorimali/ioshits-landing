@@ -4,17 +4,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iOS Hits - Premium Mobile Experiences</title>
+    <title>iOS Hits - Premium iOS Applications | Stepby & iDiction</title>
     <meta name="description"
-        content="Discover a collection of high-quality, crafted iOS applications designed to enhance your daily life.">
+        content="Discover premium iOS applications by iOS Hits. Download Stepby Pedometer for step tracking and iDiction for pronunciation mastery. Available on the App Store.">
+    <meta name="keywords"
+        content="iOS apps, iPhone apps, Stepby, iDiction, pedometer, pronunciation app, step counter, English pronunciation, App Store">
+    <meta name="author" content="iOS Hits">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ioshits.com/">
+    <meta property="og:title" content="iOS Hits - Premium iOS Applications">
+    <meta property="og:description"
+        content="Discover premium iOS applications. Download Stepby Pedometer and iDiction from the App Store.">
+    <meta property="og:image" content="https://ioshits.com/og-image.png">
+    <meta property="og:site_name" content="iOS Hits">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://ioshits.com/">
+    <meta name="twitter:title" content="iOS Hits - Premium iOS Applications">
+    <meta name="twitter:description"
+        content="Discover premium iOS applications. Download Stepby Pedometer and iDiction from the App Store.">
+    <meta name="twitter:image" content="https://ioshits.com/og-image.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ioshits.com/">
+
     <link rel="icon" href="favicon.svg?v=20251221-2" type="image/svg+xml">
     <link rel="icon" href="favicon.svg?v=20251221-2" sizes="any">
-    <link rel="stylesheet" href="style.css?v=20251221">
+    <link rel="stylesheet" href="style.css?v=20251224">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;600&display=swap"
         rel="stylesheet">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "iOS Hits",
+        "url": "https://ioshits.com",
+        "logo": "https://ioshits.com/favicon.svg",
+        "description": "Premium iOS application developer",
+        "sameAs": []
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Stepby Pedometer",
+        "operatingSystem": "iOS",
+        "applicationCategory": "HealthApplication",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.5",
+            "ratingCount": "100"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "iDiction",
+        "operatingSystem": "iOS",
+        "applicationCategory": "EducationalApplication",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
 </head>
 
 <body>
@@ -38,11 +109,10 @@
     </header>
 
     <main>
-        <section class="hero">
+        <section class="hero hero-compact">
             <div class="hero-content">
-                <h1>Crafting Digital <br><span class="gradient-text">Masterpieces</span></h1>
-                <p>Explore a curated collection of iOS applications built with precision, performance, and passion.</p>
-                <a href="#apps" class="primary-button">View Collection</a>
+                <h1>Crafting Digital <span class="gradient-text">Masterpieces</span></h1>
+                <p>Explore premium iOS applications built with precision, performance, and passion.</p>
             </div>
         </section>
 
@@ -52,7 +122,8 @@
                 <!-- App 1: Stepby Daily Weekly Pedometer -->
                 <div class="app-card glass-card">
                     <div class="app-icon" data-fallback="👟" aria-hidden="true">
-                        <img src="stepby_icon_128.jpg" alt="Stepby Pedometer Icon" width="64" height="64" loading="lazy" decoding="async">
+                        <img src="stepby_icon_128.jpg" alt="Stepby Pedometer Icon" width="64" height="64" loading="lazy"
+                            decoding="async">
                     </div>
                     <div class="app-info">
                         <h3>Stepby Pedometer</h3>
@@ -67,14 +138,16 @@
                 <!-- App 2: iDiction -->
                 <div class="app-card glass-card">
                     <div class="app-icon" data-fallback="🎤" aria-hidden="true">
-                        <img src="idiction_icon_128.jpg" alt="iDiction Icon" width="64" height="64" loading="lazy" decoding="async">
+                        <img src="idiction_icon_128.jpg" alt="iDiction - English Pronunciation App Icon" width="64"
+                            height="64" loading="lazy" decoding="async">
                     </div>
                     <div class="app-info">
                         <h3>iDiction</h3>
                         <p class="app-tag">Education</p>
-                        <p class="app-desc">Master your pronunciation with advanced voice analysis. Coming soon to take
-                            your speaking skills to the next level.</p>
-                        <span class="app-link" style="opacity: 0.7; cursor: default;">Coming Soon</span>
+                        <p class="app-desc">Master your English pronunciation with advanced voice analysis. Practice
+                            speaking and improve your accent with real-time feedback.</p>
+                        <a href="https://apps.apple.com/us/app/idiction/id1199822929" target="_blank" rel="noopener"
+                            class="app-link">Download on App Store <span class="arrow">→</span></a>
                     </div>
                 </div>
 
