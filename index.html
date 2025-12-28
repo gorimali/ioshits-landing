@@ -11,6 +11,7 @@
         content="iOS apps, iPhone apps, Stepby, iDiction, pedometer, pronunciation app, step counter, English pronunciation, App Store">
     <meta name="author" content="iOS Hits">
     <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#050507">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -32,13 +33,14 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://ioshits.com/">
 
-    <link rel="icon" href="favicon.svg?v=20251221-2" type="image/svg+xml">
-    <link rel="icon" href="favicon.svg?v=20251221-2" sizes="any">
-    <link rel="stylesheet" href="style.css?v=20251224">
+    <link rel="icon" href="favicon.svg?v=20251228" type="image/svg+xml">
+    <link rel="icon" href="favicon.svg?v=20251228" sizes="any">
+    <link rel="apple-touch-icon" href="favicon.svg?v=20251228">
+    <link rel="stylesheet" href="style.css?v=20251228">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
     <!-- Structured Data -->
@@ -49,7 +51,7 @@
         "name": "iOS Hits",
         "url": "https://ioshits.com",
         "logo": "https://ioshits.com/favicon.svg",
-        "description": "Premium iOS application developer",
+        "description": "Premium iOS application developer creating beautiful, performant apps",
         "sameAs": []
     }
     </script>
@@ -92,15 +94,15 @@
     <div class="background-glob"></div>
     <div class="background-glob-2"></div>
 
-    <header class="glass-header">
+    <header class="glass-header" id="header">
         <nav>
-            <div class="logo">iOSHits</div>
-            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+            <a href="#" class="logo">iOSHits</a>
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-            <ul class="nav-links">
+            <ul class="nav-links" role="navigation">
                 <li><a href="#apps">Apps</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact" class="cta-button">Contact</a></li>
@@ -109,85 +111,110 @@
     </header>
 
     <main>
-        <section class="hero hero-compact">
+        <section class="hero hero-compact" id="home">
             <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Available on App Store
+                </div>
                 <h1>Crafting Digital <span class="gradient-text">Masterpieces</span></h1>
-                <p>Explore premium iOS applications built with precision, performance, and passion.</p>
+                <p>Beautiful, performant iOS applications built with obsessive attention to detail, designed to enhance
+                    your everyday life.</p>
             </div>
         </section>
 
         <section id="apps" class="apps-section">
             <h2 class="section-title">Featured Apps</h2>
+            <p class="section-subtitle">Premium applications crafted with care, designed for the modern iOS experience
+            </p>
+
             <div class="apps-grid">
                 <!-- App 1: Stepby Daily Weekly Pedometer -->
-                <div class="app-card glass-card">
+                <article class="app-card glass-card">
                     <div class="app-icon" data-fallback="👟" aria-hidden="true">
-                        <img src="stepby_icon_128.jpg" alt="Stepby Pedometer Icon" width="64" height="64" loading="lazy"
+                        <img src="stepby_icon_128.jpg" alt="Stepby Pedometer Icon" width="72" height="72" loading="lazy"
                             decoding="async">
                     </div>
                     <div class="app-info">
                         <h3>Stepby Pedometer</h3>
                         <p class="app-tag">Health & Fitness</p>
-                        <p class="app-desc">Track your daily and weekly steps effortlessly. Your simple companion for a
-                            healthier lifestyle.</p>
+                        <p class="app-desc">Track your daily and weekly steps effortlessly with beautiful
+                            visualizations. Your elegant companion for a healthier, more active lifestyle.</p>
                         <a href="https://apps.apple.com/us/app/stepby-daily-weekly-pedometer/id1224976347"
-                            target="_blank" class="app-link">Download on App Store <span class="arrow">→</span></a>
+                            target="_blank" rel="noopener" class="app-link"
+                            aria-label="Download Stepby Pedometer on App Store">
+                            <span>Download on App Store</span>
+                            <span class="arrow">→</span>
+                        </a>
                     </div>
-                </div>
+                </article>
 
                 <!-- App 2: iDiction -->
-                <div class="app-card glass-card">
+                <article class="app-card glass-card">
                     <div class="app-icon" data-fallback="🎤" aria-hidden="true">
-                        <img src="idiction_icon_128.jpg" alt="iDiction - English Pronunciation App Icon" width="64"
-                            height="64" loading="lazy" decoding="async">
+                        <img src="idiction_icon_128.jpg" alt="iDiction - English Pronunciation App Icon" width="72"
+                            height="72" loading="lazy" decoding="async">
                     </div>
                     <div class="app-info">
                         <h3>iDiction</h3>
                         <p class="app-tag">Education</p>
                         <p class="app-desc">Master your English pronunciation with advanced voice analysis. Practice
-                            speaking and improve your accent with real-time feedback.</p>
+                            speaking and improve your accent with real-time AI-powered feedback.</p>
                         <a href="https://apps.apple.com/us/app/idiction/id1199822929" target="_blank" rel="noopener"
-                            class="app-link">Download on App Store <span class="arrow">→</span></a>
+                            class="app-link" aria-label="Download iDiction on App Store">
+                            <span>Download on App Store</span>
+                            <span class="arrow">→</span>
+                        </a>
                     </div>
-                </div>
+                </article>
 
                 <!-- App 3: QuizParty -->
-                <div class="app-card glass-card">
-                    <div class="app-icon" style="background: linear-gradient(135deg, #ff0844, #ffb199);">QP</div>
+                <article class="app-card glass-card">
+                    <div class="app-icon" style="background: linear-gradient(135deg, #ff0844 0%, #ffb199 100%);">QP
+                    </div>
                     <div class="app-info">
                         <h3>QuizParty</h3>
                         <p class="app-tag">Games</p>
-                        <p class="app-desc">The ultimate trivia experience. Gather your friends and get ready for the
-                            most exciting quiz battles.</p>
-                        <span class="app-link" style="opacity: 0.7; cursor: default;">Coming Soon</span>
+                        <p class="app-desc">The ultimate multiplayer trivia experience. Gather your friends and get
+                            ready for the most exciting quiz battles with live competitions.</p>
+                        <span class="coming-soon-badge">Coming Soon</span>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
 
         <section id="about" class="about-section glass-panel">
             <h2>About the Developer</h2>
-            <p>Passionate about creating smooth, native iOS experiences that users love. Focused on clean code, modern
-                UI/UX, and performance.</p>
+            <p>Passionate about creating smooth, native iOS experiences that users truly love. Focused on clean code,
+                modern UI/UX, pixel-perfect design, and exceptional performance.</p>
+            <div class="tech-stack">
+                <span class="tech-item">Swift</span>
+                <span class="tech-item">SwiftUI</span>
+                <span class="tech-item">UIKit</span>
+                <span class="tech-item">Core Data</span>
+                <span class="tech-item">HealthKit</span>
+            </div>
         </section>
 
         <section id="contact" class="contact-section glass-panel">
-            <h2>Get in Touch</h2>
-            <p>Interested in collaborating or have questions? Feel free to reach out!</p>
-            <a href="mailto:contact@ioshits.com" class="primary-button">Send Email</a>
+            <h2>Let's Connect</h2>
+            <p>Have a project in mind or want to collaborate? I'd love to hear from you.</p>
+            <a href="mailto:contact@ioshits.com" class="primary-button">
+                <span>Send Email</span>
+            </a>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 iOS Hits. All rights reserved.</p>
-        <div class="social-links">
-            <a href="#">Twitter</a>
-            <a href="#">GitHub</a>
-            <a href="#">LinkedIn</a>
-        </div>
+        <p>© 2025 iOS Hits. All rights reserved.</p>
+        <nav class="social-links" aria-label="Social media links">
+            <a href="#" aria-label="Twitter">Twitter</a>
+            <a href="#" aria-label="GitHub">GitHub</a>
+            <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        </nav>
     </footer>
 
-    <script src="script.js?v=20251221"></script>
+    <script src="script.js?v=20251228"></script>
 </body>
 
 </html>
