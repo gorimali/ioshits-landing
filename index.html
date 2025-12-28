@@ -33,10 +33,10 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://ioshits.com/">
 
-    <link rel="icon" href="favicon.svg?v=20251228" type="image/svg+xml">
-    <link rel="icon" href="favicon.svg?v=20251228" sizes="any">
-    <link rel="apple-touch-icon" href="favicon.svg?v=20251228">
-    <link rel="stylesheet" href="style.css?v=20251228">
+    <link rel="icon" href="favicon.svg?v=20251228-2" type="image/svg+xml">
+    <link rel="icon" href="favicon.svg?v=20251228-2" sizes="any">
+    <link rel="apple-touch-icon" href="favicon.svg?v=20251228-2">
+    <link rel="stylesheet" href="style.css?v=20251228-2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -91,18 +91,24 @@
 </head>
 
 <body>
-    <div class="background-glob"></div>
-    <div class="background-glob-2"></div>
+    <!-- Ambient Background -->
+    <div class="background-glob" aria-hidden="true"></div>
+    <div class="background-glob-2" aria-hidden="true"></div>
 
+    <!-- Floating Particles -->
+    <div class="particles" aria-hidden="true" id="particles"></div>
+
+    <!-- Header -->
     <header class="glass-header" id="header">
         <nav>
-            <a href="#" class="logo">iOSHits</a>
-            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <a href="#" class="logo" aria-label="iOS Hits Home">iOSHits</a>
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false"
+                aria-controls="nav-menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-            <ul class="nav-links" role="navigation">
+            <ul class="nav-links" id="nav-menu" role="navigation">
                 <li><a href="#apps">Apps</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact" class="cta-button">Contact</a></li>
@@ -111,29 +117,30 @@
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section class="hero hero-compact" id="home">
             <div class="hero-content">
                 <div class="hero-badge">
-                    <span class="badge-dot"></span>
-                    Available on App Store
+                    <span class="badge-dot" aria-hidden="true"></span>
+                    <span>Available on App Store</span>
                 </div>
-                <h1>Crafting Digital <span class="gradient-text">Masterpieces</span></h1>
+                <h1>Crafting Digital <span class="gradient-text" data-text="Masterpieces">Masterpieces</span></h1>
                 <p>Beautiful, performant iOS applications built with obsessive attention to detail, designed to enhance
                     your everyday life.</p>
             </div>
         </section>
 
+        <!-- Apps Section -->
         <section id="apps" class="apps-section">
             <h2 class="section-title">Featured Apps</h2>
             <p class="section-subtitle">Premium applications crafted with care, designed for the modern iOS experience
             </p>
 
             <div class="apps-grid">
-                <!-- App 1: Stepby Daily Weekly Pedometer -->
-                <article class="app-card glass-card">
+                <!-- App 1: Stepby -->
+                <article class="app-card glass-card" data-tilt>
                     <div class="app-icon" data-fallback="👟" aria-hidden="true">
-                        <img src="stepby_icon_128.jpg" alt="Stepby Pedometer Icon" width="72" height="72" loading="lazy"
-                            decoding="async">
+                        <img src="stepby_icon_128.jpg" alt="" width="80" height="80" loading="lazy" decoding="async">
                     </div>
                     <div class="app-info">
                         <h3>Stepby Pedometer</h3>
@@ -141,36 +148,37 @@
                         <p class="app-desc">Track your daily and weekly steps effortlessly with beautiful
                             visualizations. Your elegant companion for a healthier, more active lifestyle.</p>
                         <a href="https://apps.apple.com/us/app/stepby-daily-weekly-pedometer/id1224976347"
-                            target="_blank" rel="noopener" class="app-link"
-                            aria-label="Download Stepby Pedometer on App Store">
+                            target="_blank" rel="noopener noreferrer" class="app-link"
+                            aria-label="Download Stepby Pedometer on the App Store">
                             <span>Download on App Store</span>
-                            <span class="arrow">→</span>
+                            <span class="arrow" aria-hidden="true">→</span>
                         </a>
                     </div>
                 </article>
 
                 <!-- App 2: iDiction -->
-                <article class="app-card glass-card">
+                <article class="app-card glass-card" data-tilt>
                     <div class="app-icon" data-fallback="🎤" aria-hidden="true">
-                        <img src="idiction_icon_128.jpg" alt="iDiction - English Pronunciation App Icon" width="72"
-                            height="72" loading="lazy" decoding="async">
+                        <img src="idiction_icon_128.jpg" alt="" width="80" height="80" loading="lazy" decoding="async">
                     </div>
                     <div class="app-info">
                         <h3>iDiction</h3>
                         <p class="app-tag">Education</p>
                         <p class="app-desc">Master your English pronunciation with advanced voice analysis. Practice
                             speaking and improve your accent with real-time AI-powered feedback.</p>
-                        <a href="https://apps.apple.com/us/app/idiction/id1199822929" target="_blank" rel="noopener"
-                            class="app-link" aria-label="Download iDiction on App Store">
+                        <a href="https://apps.apple.com/us/app/idiction/id1199822929" target="_blank"
+                            rel="noopener noreferrer" class="app-link" aria-label="Download iDiction on the App Store">
                             <span>Download on App Store</span>
-                            <span class="arrow">→</span>
+                            <span class="arrow" aria-hidden="true">→</span>
                         </a>
                     </div>
                 </article>
 
                 <!-- App 3: QuizParty -->
-                <article class="app-card glass-card">
-                    <div class="app-icon" style="background: linear-gradient(135deg, #ff0844 0%, #ffb199 100%);">QP
+                <article class="app-card glass-card" data-tilt>
+                    <div class="app-icon" style="background: linear-gradient(135deg, #ff0844 0%, #ffb199 100%);"
+                        aria-hidden="true">
+                        <span>QP</span>
                     </div>
                     <div class="app-info">
                         <h3>QuizParty</h3>
@@ -183,19 +191,21 @@
             </div>
         </section>
 
+        <!-- About Section -->
         <section id="about" class="about-section glass-panel">
             <h2>About the Developer</h2>
             <p>Passionate about creating smooth, native iOS experiences that users truly love. Focused on clean code,
                 modern UI/UX, pixel-perfect design, and exceptional performance.</p>
-            <div class="tech-stack">
-                <span class="tech-item">Swift</span>
-                <span class="tech-item">SwiftUI</span>
-                <span class="tech-item">UIKit</span>
-                <span class="tech-item">Core Data</span>
-                <span class="tech-item">HealthKit</span>
+            <div class="tech-stack" role="list" aria-label="Technologies used">
+                <span class="tech-item" role="listitem">Swift</span>
+                <span class="tech-item" role="listitem">SwiftUI</span>
+                <span class="tech-item" role="listitem">UIKit</span>
+                <span class="tech-item" role="listitem">Core Data</span>
+                <span class="tech-item" role="listitem">HealthKit</span>
             </div>
         </section>
 
+        <!-- Contact Section -->
         <section id="contact" class="contact-section glass-panel">
             <h2>Let's Connect</h2>
             <p>Have a project in mind or want to collaborate? I'd love to hear from you.</p>
@@ -205,16 +215,17 @@
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <p>© 2025 iOS Hits. All rights reserved.</p>
         <nav class="social-links" aria-label="Social media links">
-            <a href="#" aria-label="Twitter">Twitter</a>
-            <a href="#" aria-label="GitHub">GitHub</a>
-            <a href="#" aria-label="LinkedIn">LinkedIn</a>
+            <a href="#" aria-label="Follow on Twitter">Twitter</a>
+            <a href="#" aria-label="View GitHub profile">GitHub</a>
+            <a href="#" aria-label="Connect on LinkedIn">LinkedIn</a>
         </nav>
     </footer>
 
-    <script src="script.js?v=20251228"></script>
+    <script src="script.js?v=20251228-2"></script>
 </body>
 
 </html>
