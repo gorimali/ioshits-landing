@@ -746,6 +746,10 @@ body::after {
     transition: all var(--duration-normal) var(--ease-out-expo);
 }
 
+.app-icon--quizparty {
+    background: var(--gradient-warm);
+}
+
 .app-icon::after {
     content: '';
     position: absolute;
