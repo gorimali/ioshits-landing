@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Elements to animate
     const animatedElements = document.querySelectorAll(
-        '.glass-card, .section-title, .section-subtitle, .hero-content, .about-section, .contact-section'
+        '.glass-card, .glass-panel, .section-title, .section-subtitle, .hero-content, .about-section, .contact-section'
     );
 
     animatedElements.forEach(el => {
@@ -343,7 +343,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Trigger initial animations
         setTimeout(() => {
-            document.querySelector('.hero-content')?.classList.add('revealed');
+            document.querySelectorAll('.hero-content').forEach((element) => {
+                element.classList.add('revealed');
+            });
         }, 100);
     });
 

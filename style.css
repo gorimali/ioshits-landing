@@ -1276,11 +1276,275 @@ footer {
 }
 
 /* =====================================================
+   APP DETAIL PAGES
+   ===================================================== */
+.apps-note {
+    color: var(--text-secondary);
+    text-align: center;
+    max-width: 720px;
+    margin: -1.5rem auto var(--space-xl);
+}
+
+.app-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    margin-top: auto;
+}
+
+.app-actions .app-link {
+    margin-top: 0;
+}
+
+.app-link--secondary {
+    background: rgba(255, 255, 255, 0.02);
+    color: var(--text-secondary);
+}
+
+.app-link--secondary:hover {
+    color: var(--bg-primary);
+}
+
+.app-main {
+    padding: 7rem 5% var(--space-2xl);
+}
+
+.app-hero {
+    min-height: auto;
+    padding: 2rem 0 0;
+}
+
+.app-hero-card {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: clamp(1.5rem, 4vw, 3rem);
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: var(--space-lg);
+    transition: color var(--duration-normal) var(--ease-out-expo);
+}
+
+.back-link:hover {
+    color: var(--text-primary);
+}
+
+.app-hero-layout {
+    display: grid;
+    grid-template-columns: minmax(120px, 180px) 1fr;
+    gap: clamp(1.5rem, 4vw, 3rem);
+    align-items: center;
+}
+
+.app-hero-icon {
+    width: min(180px, 32vw);
+    aspect-ratio: 1;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow:
+        var(--shadow-lg),
+        0 0 0 1px rgba(255, 255, 255, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.app-hero-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.app-hero-copy h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.7rem, 7vw, 5.5rem);
+    line-height: 0.96;
+    letter-spacing: -0.05em;
+    margin-bottom: var(--space-md);
+}
+
+.app-hero-copy p {
+    color: var(--text-secondary);
+    font-size: 1.12rem;
+    max-width: 60ch;
+}
+
+.app-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-full);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--glass-border);
+    color: var(--text-secondary);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: var(--space-lg);
+}
+
+.app-eyebrow::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent-cyan);
+    box-shadow: 0 0 16px rgba(34, 211, 238, 0.7);
+}
+
+.app-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    margin-top: var(--space-lg);
+}
+
+.app-detail-section + .app-detail-section {
+    margin-top: var(--space-xl);
+}
+
+.detail-facts-grid,
+.feature-grid,
+.related-grid {
+    display: grid;
+    gap: var(--space-lg);
+}
+
+.detail-facts-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.feature-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.related-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.detail-fact,
+.feature-card,
+.related-card,
+.support-panel {
+    padding: var(--space-lg);
+}
+
+.detail-label,
+.feature-kicker {
+    display: inline-block;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+}
+
+.detail-value {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.55rem;
+}
+
+.detail-fact p,
+.feature-card p,
+.support-panel p,
+.related-card p {
+    color: var(--text-secondary);
+}
+
+.feature-card h3,
+.related-card h3,
+.story-copy h2,
+.support-panel h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.4rem, 2.6vw, 2rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+
+.story-section {
+    max-width: 1100px;
+    margin: var(--space-xl) auto 0;
+    padding: clamp(1.5rem, 4vw, 3rem);
+}
+
+.story-copy {
+    max-width: 72ch;
+}
+
+.story-copy p + p {
+    margin-top: 1rem;
+}
+
+.support-panel {
+    max-width: 1100px;
+    margin: var(--space-xl) auto 0;
+}
+
+.support-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    margin-top: var(--space-lg);
+}
+
+.support-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.95rem 1.25rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--glass-border);
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text-primary);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all var(--duration-normal) var(--ease-out-expo);
+}
+
+.support-links a:hover {
+    background: rgba(255, 255, 255, 0.07);
+    transform: translateY(-2px);
+}
+
+.related-card {
+    text-decoration: none;
+    color: inherit;
+}
+
+.related-card:hover {
+    color: inherit;
+}
+
+.related-card .app-tag {
+    margin-bottom: 0.85rem;
+}
+
+/* =====================================================
    RESPONSIVE DESIGN
    ===================================================== */
 @media (max-width: 1024px) {
     .apps-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .detail-facts-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -1412,6 +1676,33 @@ footer {
     .legal-nav a {
         font-size: 0.95rem;
     }
+
+    .app-main {
+        padding: 6.5rem var(--space-md) var(--space-xl);
+    }
+
+    .app-hero-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .app-hero-icon {
+        width: min(140px, 40vw);
+    }
+
+    .app-hero-copy h1 {
+        font-size: clamp(2.3rem, 11vw, 4rem);
+    }
+
+    .detail-facts-grid,
+    .related-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .story-section,
+    .support-panel {
+        padding: var(--space-lg);
+        border-radius: var(--radius-lg);
+    }
 }
 
 @media (max-width: 480px) {
@@ -1451,6 +1742,23 @@ footer {
 
     .legal-nav a {
         width: auto;
+    }
+
+    .app-actions,
+    .app-hero-actions,
+    .support-links {
+        flex-direction: column;
+    }
+
+    .app-hero-copy p,
+    .apps-note {
+        font-size: 1rem;
+    }
+
+    .app-hero-actions .primary-button,
+    .app-hero-actions .app-link,
+    .support-links a {
+        width: 100%;
     }
 }
 
